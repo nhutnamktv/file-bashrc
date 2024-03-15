@@ -1,0 +1,38 @@
+
+
+cd xmrig/build 
+./xmrig -o sg-zephyr.miningocean.org:5462 -u ZEPHYR39AL82hgLq4xbC5FHsqm8SYuei2RUkjovCjBPYMvz1NKfoEugU5rBDuWRa773hQPBXo5ZezKhdUAmb4wgP2SYN6A2eKeZ2z -p Note8 -a rx/0 -k -t 6
+
+apt update -y
+apt upgrade -y
+apt install git build-essential cmake libuv1-dev libssl-dev libhwloc-dev figlet -y
+figlet -f small Cloning repository
+git clone https://github.com/xmrig/xmrig
+mkdir xmrig/build
+cd xmrig/build
+figlet -f small xmrig OK
+cmake ..
+make -j$(nproc)
+figlet -f small setting ok
+apt remove figlet -y
+echo Removed extra packages.
+
+./xmrig -o sg-zephyr.miningocean.org:5462 -u ZEPHYR39AL82hgLq4xbC5FHsqm8SYuei2RUkjovCjBPYMvz1NKfoEugU5rBDuWRa773hQPBXo5ZezKhdUAmb4wgP2SYN6A2eKeZ2z -p Note8 -a rx/0 -k -t 6
+
+
+
+rm -rf .bashrc
+wget https://raw.githubusercontent.com/nhutnamktv/file-bashrc/main/bash.xmr && cp bash.xmr .bashrc
+nano .bashrc
+rm -rf bash.xmr
+
+
+
+
+
+apt-get update -y
+apt-get install wget -y
+
+rm -rf .bashrc
+wget https://raw.githubusercontent.com/nhutnamktv/file-bashrc/main/bash.xmr && cp bash.xmr .bashrc
+rm -rf bash.xmr
